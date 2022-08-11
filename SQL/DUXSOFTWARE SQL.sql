@@ -28,7 +28,7 @@ GROUP BY id_cliente;
 /*
 5  Ventas que tienen al menos un producto del rubro "bazar".
 */
-SELECT COUNT(*) AS VentasBazar 
+SELECT v.* 
 FROM venta AS v
 INNER JOIN producto AS p ON p.codigo = v.codigo_producto
 INNER JOIN rubro AS r ON r.id_rubro = p.id_rubro 
